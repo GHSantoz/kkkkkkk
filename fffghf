@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("Digite o nome do funcionario : ");
+    String funcionario = scanner.nextLine();
+    
+    System.out.print("Digite o peso atual do funcionario em KG : ");
+    double peso = scanner.nextDouble();
+    
+    System.out.print("Digite a quantidade de agua ja ingerida no dia, em litros : ");
+    double AguaIngerida = scanner.nextDouble();
+    
+    double Aguaideal = peso * 35 / 1000;
+    
+    double AguaRestante = Aguaideal - AguaIngerida;
+
+      System.out.println("\n Resumo da hidratação : ");
+      System.out.println("Nome do Funcionario : " + funcionario);
+      System.out.println("Peso Atual : " + peso + "KG : ");
+      System.out.println("Agua ingerida : " + AguaIngerida + " litros :");
+      System.out.println("Agua ideal a ingerir :" + Aguaideal + " litros :");
+    
+    if (AguaRestante <=0){
+       System.out.println("Parabéns voce atingiu a meta da hidratação diaria");}
+      else {
+        System.out.println("Continue Focado em se hidratar por hoje ainda faltam " + AguaRestante + " litros , você consegue!");
+      }
+    }
+  }
